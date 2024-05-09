@@ -1,0 +1,11 @@
+@startuml pacman 
+
+class Pacman 
+class Fantasma{
++ MoverDerecha()
++ MoverIzquierda()
++ MoverAdelante()
+}
+
+
+

@@ -14,10 +14,12 @@ int main(int argc, char const *argv[])
     for(int i=0; 1 < 20;)
     {
         list<string> c;
-        c.push_back("Personaje:" + to_string(i));
-        c.push_back("  o  ");
-        c.push_back("--|--");
-        c.push_back("//\\");
+        c.push_back("Pacman:" + to_string(i));
+        c.push_back("--------");
+        c.push_back("|     O  \");
+        c.push_back("|     ____)");
+        c.push_back("|      \");
+        c.push_back("|______)");
         Dibujo contenido(
         c,
         experimental::randint(0,100), //PosX

@@ -1,11 +1,33 @@
 @startuml pacman 
 
-class Pacman 
+class Pacman{
++ MoverAdelante()
++ MoverAbajo()
++ MoverArriba()
+} 
 class Fantasma{
 + MoverDerecha()
 + MoverIzquierda()
 + MoverAdelante()
 }
+class Comida
+class Vida 
+class Juego
+class Puntuacion
+class Nivel 
+class Jugador
+class Colisionable 
 
+Juego "1" *-- "*" Nivel 
+Nivel "1" *-- "*" Pacman
 
+Jugador "1" -- "1" Pacman
+Jugador "1" *-- "3" Vida
+Jugador "1" -- "1" Puntuacion
+Juego "1" *-- "1" Jugador
 
+Comida -- Colisionable
+Fantasma -- Colisionable
+Pacman -- Colisionable 
+
+@enduml
